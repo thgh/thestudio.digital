@@ -4,5 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "export": "echo hi"
+  },
+  "dependencies": {
+    "minimal-request-promise": "^1.5.0"
   }
 }
