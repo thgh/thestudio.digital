@@ -1,7 +1,0 @@
-.DS_Store
-node_modules
-.sapper
-cypress/screenshots
-templates/.*
-dist
-app/manifest
