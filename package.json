@@ -1,11 +1,23 @@
 {
-  "name": "TODO",
+  "name": "todo",
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
     "export": "echo hi"
   },
   "dependencies": {
-    "minimal-request-promise": "^1.5.0"
-  }
+    "minimal-request-promise": "^1.5.0",
+    "node-sass": "^4.9.0"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thgh/thestudio.digital.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thgh/thestudio.digital/issues"
+  },
+  "homepage": "https://github.com/thgh/thestudio.digital#readme"
 }
