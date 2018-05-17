@@ -14,34 +14,50 @@
   </head>  
   
   <body>
+    
     <header class="header">
-      <a href=""><img src="./assets/thestudio_logo.svg" class="header-logo" alt="The Studio Logo"></a>
+      <a href=""><img src="./assets/thestudio_logo.svg" class="header-logo" alt="The Studio Full Logo"></a>
       <nav class="nav_mobile">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div id="burger"></div>
+        <div></div><div></div><div></div>
       </nav>
-      <nav class="nav_desktop">
-        <a href="">Accueil</a>
+      <nav class="nav_mobile_drop">
+        <a class="active" href="">Accueil</a>
         <a href="">Career</a>
         <a href="">Contact</a>
-        <div class="nav_lang">fr ⌵</div>
-        <div class="nav_lang_drop">
-          <div>en</div>
-          <div>nl</div>
-        </div>
+        <div class="nav_lang">
+          <p>fr ⌵</p>
+          <div class="nav_lang_drop">
+            <p>en</p>
+            <p>nl</p>
+          </div>
+        </div>  
+        <a class="close">X</a>
+      </nav>
+      <nav class="nav_desktop">
+        <a class="active" href="">Accueil</a>
+        <a href="">Career</a>
+        <a href="">Contact</a>
+        <div class="nav_lang">
+          <p>fr ⌵</p>
+          <div class="nav_lang_drop">
+            <p>en</p>
+            <p>nl</p>
+          </div>
+        </div>  
       </nav>
 
     </header>
     <section class="section1">
 
     </section>
-
-    <section class="section2">
-      <h1>We are <span>The Studio</span></br> Belfius subsidiary dedicated to digital <span>innovation</span>.</h1>
+    <div id="bubble">
+      
+    <section class="section2" >
+      <h1 class="scroll_anim">We are <span>The Studio</span></br> Belfius subsidiary dedicated to digital <span>innovation</span>.</h1>
       <img src="./assets/trait.png" alt="----">
-      <p>Our mission is to design world-class digital experiences for our customers, our partners and Belfius. The Studio and its Innovation Lab is a place where our talented people have time to do research and prototype on innovative ideas.</p>
-       <div>
+      <p class="scroll_anim">Our mission is to design world-class digital experiences for our customers, our partners and Belfius. The Studio and its Innovation Lab is a place where our talented people have time to do research and prototype on innovative ideas.</p>
+       <div class="scroll_anim">
         <div class="trait"></div>
         <h2>Our projects</h2>
         <img src="./assets/petit_trait.png" alt="--">
@@ -51,7 +67,7 @@
       
     <section class="section3 projects">
      
-      <article class="pengo">
+      <article class="pengo scroll_anim">
         <img src="./assets/main_pengo.png" alt="pengo main" class="pengo_img">
         <div class="project project_pengo">
           <h2><img src="./assets/pengo.png" alt="Pengo Logo">PENGO</h2>
@@ -63,7 +79,7 @@
           <a href="https://pengo.me/?ref=TheStudio"> > Visiter le site</a>
         </div>
       </article>
-      <article class="brightknight">
+      <article class="brightknight scroll_anim">
         <div class="project project_brightknight">
           <h2><img src="./assets/brightknight.png" alt="brightknight">BRIGHTKNIGHT</h2>
           <p>A virtual assistant is a digital colleague that helps with routine tasks. We focus on integrating them using technologies like Robotic Process Automation (RPA) to interact with existing systems.</p>
@@ -73,7 +89,7 @@
       </article>
     </section>
 
-    <section class="section4">
+    <section class="section4 scroll_anim">
       <div>
         <h3>Work with us</h3>
         <div class="trait"></div>
@@ -87,20 +103,20 @@
     </section>
 
     <section class="section6">
-      <h3>Contact us and let's start to innovate</h3>
+      <h3 class="scroll_anim">Contact us and let's start to innovate</h3>
       <div class="trait"></div>
       <div class="contact">
-        <div>
+        <div class="scroll_anim">
           <img src="./assets/location.png">
           <p>Address</p>
           <a href="">48 rue de l'ecuyer, 1000 Bxl</a>
         </div>
-        <div>
+        <div class="scroll_anim">
           <img src="./assets/tel.png">
           <p>Phone</p>
           <a href="">02 735 35 35</a>
         </div>
-        <div>
+        <div class="scroll_anim">
           <img src="./assets/mail.png">
           <p>Email</p>
           <a href="">hey@thestudio.digital</a>
@@ -109,6 +125,13 @@
       <a href="https://www.linkedin.com/company/the-studio-belfius/" target="_blank" class="linkedin"><img src="./assets/linkedin_rond.svg" alt="Linkedin"></a>
     </section>
 
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin_light.js" type="text/javascript"></script>  
+    <script src="./particles.js"></script>
+    <script type="text/javascript" src="./animation.js"></script>
+    
   </body>
 </html>
 
