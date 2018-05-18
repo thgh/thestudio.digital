@@ -1,0 +1,22 @@
+.section_img {
+  height: 65vh;
+  background-image: url(./assets/career.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.section_intro {
+	padding-bottom: 0;
+}
+.section_job {
+	height: auto;
+}
+
+.section4 {
+    height: 30vh;
+}
+@media (min-width: 600px) {
+	.section4>div {
+    	width: 55vw;
+	}
+}

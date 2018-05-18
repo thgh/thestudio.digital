@@ -1,0 +1,246 @@
+* {
+  box-sizing:border-box;
+  margin:0px;
+  padding:0px;
+  text-decoration: none;
+  font-family: 'Belfius Regular';
+}
+@font-face {
+    font-family: 'Belfius Regular';
+    src: url('./assets/BelfiusNormal_regular.ttf'); 
+    font-style: normal;
+    font-weight: normal;
+}
+body {
+  background-color: #f4f5f7;
+  color: #525252;
+}
+h1, h2 {
+  text-align: center;
+}
+a {
+  transition: transform .2s;
+  color: #525252;
+  text-align: center;
+}
+a:hover {
+  transform: scale(1.15);
+}
+@media(min-width:1000px ){
+  .section_intro,.section4,.section_contact {
+    padding: 0 10vw;
+  }
+}
+body {
+  position: relative;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  z-index: -3;
+}
+
+/* HEADER */
+#burger{
+  width: 100px;
+  height: 500px;
+}
+.header {
+  position: absolute;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw;
+  font-family: arial;
+  letter-spacing: .1rem;
+  font-size: 0.8rem;
+}
+.header-logo {
+  height: 100%;
+}
+#svg_the_studio {
+  width:90vw;
+  fill:#c30045;
+}
+.nav_desktop {
+  display: none;
+  width: 30vw;
+  justify-content: space-around;
+  align-items: baseline;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 4vh;
+}
+.nav_desktop a {
+  padding-bottom: 2px;
+  color: white;
+}
+nav .active {
+  border-bottom: 1px solid #c30045;
+}
+.nav_mobile{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0; 
+  cursor: pointer;
+}
+.nav_mobile>div {
+  height: 2px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #c30045;
+}
+.nav_mobile_drop {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background-color: #425c6c;
+  align-items: baseline;
+  justify-content: space-around;
+  font-size: 1rem;
+  transition: transform 0.3s;
+  transform: translateY(-10vh);
+  padding-top: 3vh;
+}
+.nav_mobile:hover .nav_mobile_drop {
+  transform: translateY(-5vh);
+}
+.nav_mobile_drop a{
+  color: white;
+}
+body .display {
+  display: flex;
+  transform : translateY(0px);
+}
+nav>div{ 
+  color: #c30045;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+nav a{
+  cursor: pointer;
+}
+.nav_lang {
+  cursor: pointer;
+  text-align:center;
+  width: 50px;
+}
+.nav_lang_drop {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff24;
+  padding: 6px;
+  height: 54px;
+  border-radius: 5px;
+  width: 43px;
+  box-shadow: 2px 4px 14px #737171;
+  margin: 5px;
+}
+@media(min-width: 800px){
+  .nav_desktop {
+    display: flex;
+  }
+  .nav_mobile, .nav_mobile_drop {
+    display: none;
+  }
+  .nav_lang_drop{
+    right: 11vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* SECTION 5 -- Photo */
+
+.section_photos {
+  height:35vh;
+  background-color: #425c6c;
+  margin: 10vh 0;
+}
+
+
+/* SECTION 6 -- Contact */
+
+.section_contact {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10vh 0;
+}
+.section_contact h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.section_contact .contact {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.section_contact .contact a{
+  width: 80%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: white;
+  box-shadow: 0px 6px 9px 0px  #dcdcdc;
+}
+.section_contact .contact a:hover {
+  box-shadow: 0px 0px 20px 5px #dcdcdc;
+}
+.section_contact .contact a p:nth-child(2){
+  color: #c30045;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.section_contact .linkedin{
+  width: 10%;
+  margin-top: 30px;
+  max-width: 50px;
+}
+.section_contact .contact p:nth-child(3){
+  font-size: 0.85rem;
+}
+
+@media(min-width: 800px){
+  .section_contact {
+    height: 50vh;
+  }
+  .section_contact .contact {
+    flex-direction: row;
+     height: auto;
+  }
+  .section_contact .contact a{
+    width: 30%;
+  }
+  .section_contact .linkedin  {
+    width: 6%;
+  }
+}
+
+
+
+
