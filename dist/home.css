@@ -217,14 +217,14 @@ article.pengo {
 /* SECTION 4 -- Work with us */
 
 .section4 {
-  height:40vh;
+  height:30vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .section4>div {
   width: 100vw;
-  height: 75%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -233,6 +233,7 @@ article.pengo {
   background-color: white;
   box-shadow: 0px 6px 20px 0px #c3c3c3;
 }
+
 .section4 .trait {
   height: 40px;
   margin: 0; 
@@ -259,7 +260,9 @@ article.pengo {
 @media(min-width: 600px){
   .section4>div {
     width: 80vw;
+    min-height: 100%;
   }
+
 }
 
 
