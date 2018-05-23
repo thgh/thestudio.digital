@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+	$('a[href^="#"]').click(function(){
+	var the_id = $(this).attr("href");
+	if (the_id === '#') {
+		return;
+	}
+	$('html, body').animate({
+		scrollTop:$(the_id).offset().top
+	}, 'slow');
+	return false;
+});
+	
 	$('.nav_mobile').click(function(){
 		$(".nav_mobile_drop").toggleClass("display");
 	})
