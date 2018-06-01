@@ -1,5 +1,3 @@
-
-
 /* SECTION 1 -- Img */
 
 .section_img {
@@ -17,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 10vh;
+  padding: 20vh 0;
 }
 .section_intro img {
   width: 40%;
@@ -64,6 +62,7 @@
 
 .section3 {
   margin-bottom: 15vh;
+  position: relative;
 }
 .trait {
   height: 50px;
@@ -81,13 +80,23 @@
   flex-direction: column;
   overflow-x: hidden;
 }
-.section3 article > img{
+/*.section3 article > img{
   width: 100vw; 
   margin: 50px;
- /* max-width: 50vh;
-  max-height: 50vh;*/
+  max-width: 50vh;
+  max-height: 50vh;
+}*/
+.brightknight_img, .pengo_img {
+  height: 100vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
-
+.brightknight_img img, .pengo_img img{
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
 .project {
   width: 100vw;
   height: 100vw;
@@ -96,6 +105,7 @@
   justify-content: space-around;
   padding: 30px;
   background-color: white;
+  box-shadow: 0px 8px 20px 0px #c3c3c3;
 }
 .project h2 {
   display: flex;
@@ -124,6 +134,12 @@
 .project a:hover{
   transform: scale(1) translateX(30px);
 }
+.section3 .ombre {
+  position: absolute;
+  width: 50vh;
+  bottom: 0px;
+}
+
 article.pengo {
   flex-direction: column-reverse;
 }
@@ -131,11 +147,14 @@ article.pengo {
   .project p {
     width: 56%;
   }
-  .section3 article > img{
-    margin: 0; 
+  .section3 article .img{
     position: absolute;
     width: 50%;
     right: 0%;
+    z-index: 3;
+  }
+  .section3 article .brightknight_img{
+    left: 0;
   }
   .project_pengo {
     margin-bottom: 25px;
@@ -147,23 +166,26 @@ article.pengo {
     left: 0;
   } 
   .project_brightknight {
-    box-shadow: -5px 5px 20px 0px #c3c3c3;
-  } 
+    box-shadow: 0px 8px 20px 0px #c3c3c3;
+  }
+  /*.pengo_img{
+    position: absolute;
+    width: 50%;
+    z-index: 3;
+    right: 0;
+  }*/
 }
 @media(min-width: 600px){
+  .section3 {
+    height: 100vh;
+  }
   .project {
-    max-height: 50vh;
-    max-width: 50vh;
+    /*max-height: 50vh;
+    max-width: 50vh;*/
     height: 50vh;
     width: 50vh; 
   }
-  .section3 article > img{
-    max-width: 50vh;
-    width: 50vw;
-    z-index: -2;
-    margin: 50px;
-    position: relative;
-  }
+  
   .section3 article {
     flex-direction: row;  
   }
@@ -172,6 +194,16 @@ article.pengo {
   }
   .section3 .pengo {
     flex-direction: row;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  .section3 .brightknight {
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+    width: 100%;
+    padding-bottom: 100px;
   }
   .project p {
     width: auto;
@@ -179,63 +211,61 @@ article.pengo {
   .project_pengo {
     margin-bottom: 0;
   }
-  .section3 .brightknight>img {
+  .section3 .brightknight_img>img {
     transform: translateX(-90%);
   }
-  .section3 .pengo>img{
+  .section3 .pengo_img>img{
     transform: translateX(90%);
+  }
+  .section3 article .img{
+    max-height: 50vh;
+    height: 50vw;
+    max-width: 50vh;
+    width: 50vw;
+    z-index: -2;
+    position: relative;
   }
 
 }
 
 /* animation */
-.pengo>img {
+.pengo_img>img {
   transition: transform 1s;
   transform: translateX(100vw) rotate(40deg) translateY(-35px);
 }
-.section3 .animate .pengo_img{
-  transform: translateX(3px) rotate(0deg) translateY(0);
+.section3 .animate .pengo_img>img{
+  transform: translateX(0) rotate(0deg) translateY(0);
 }
-.section3 .animate .brightknight_img{
+.section3 .animate .brightknight_img>img{
   transform: translateX(0) ;
 }
-.brightknight>img {
+.brightknight_img>img {
   transition: transform 1s;
   transform: translateX(-100vw) ;
-  margin: 50px 0;
 }
-/*.brightknight:hover .brightknight_img{
+.brightknight:hover .brightknight_img{
   transform: translateX(0) ;
-}*/
-.project_pengo {
-  box-shadow: -5px 5px 20px 0px #c3c3c3;
-}
-.project_brightknight {
-  box-shadow: 5px 5px 20px 0px #c3c3c3;
 }
 
 /* SECTION 4 -- Work with us */
 
 .section4 {
-  height:30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*height: 40vh;*/
 }
 .section4>div {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   background-color: white;
-  box-shadow: 0px 6px 20px 0px #c3c3c3;
+  /*box-shadow: 0px 6px 20px 0px #c3c3c3;*/
+  border-radius: 12px;
 }
-
 .section4 .trait {
-  height: 40px;
+  height: 20px;
   margin: 0; 
 }
 .section4 a {
@@ -257,6 +287,7 @@ article.pengo {
   font-size: .95rem;
   text-align: center;
 }
+
 @media(min-width: 600px){
   .section4>div {
     width: 80vw;
@@ -264,9 +295,6 @@ article.pengo {
   }
 
 }
-
-
-
 
 
 

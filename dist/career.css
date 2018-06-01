@@ -1,3 +1,13 @@
+#bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_desktop a {
+  color: inherit;
+}
+
 .section_img {
   height: 45vh;
   background-image: url(./assets/career.jpg);
@@ -8,22 +18,225 @@
 .section_intro {
   padding-bottom: 0;
 }
-.section_job {
-  min-height: auto;
-  /*margin: 5vh 0;*/
-  background-image: none;
-  background-size: cover;
-  z-index: 0;
+
+.section_cadre {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+}
+.section_cadre>div{
+  width: 50%;
+  /*max-width: 250px;*/
+  height: 100%;
+  /*background-color: grey;*/
+  position: relative;
+}
+
+
+.section_cadre>div:nth-child(odd){
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /*background-color: #cecccc;*/
+
+}    
+.section_cadre>div:nth-child(1){
+  align-items: center;
+}
+.section_cadre a:hover {
+  transform: none;
+}
+.cadre {
+  /*position: absolute;*/
+  bottom: 0;
+  border: 10px ridge #2d2d2d;
+  padding: 30px;
+  /*margin: 30px;*/
+  background-image:linear-gradient(to bottom, pink 0%, pink 100%), linear-gradient(to bottom, white 0%, white 100%);
+  background-clip: content-box, padding-box;
+  box-shadow: -8px 7px 9px #9c9c9c;
+
 
 }
-.section_job .job {
-  min-height: auto;
+.cadre > p:first-child{
+  font-size: 1.25rem;
+  font-weight: bold;
 }
-.section4 {
-    height: 30vh;
+.cadre p{
+  padding:5px;
 }
-@media (min-width: 600px) {
-  .section4>div {
-      width: 55vw;
+.cadre>.trait {
+  margin: 0px;
+  height: 25px;
+}
+.annonce {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  text-align: center;
+  min-width: 130px;
+  min-height: 200px;
+}
+/* CADRES */
+
+.cadre1 {
+  width: 210px;
+  height: 250px;
+  left: 0;
+  left: calc(50% - 410px);
+  top: 5%;
+  top: 50px;
+  background-image:linear-gradient(to bottom,  #425c6c 0%,  #425c6c 100%), linear-gradient(to bottom, white 0%, white 100%);
+  padding: 10px;
+  margin-top: 100px;
+
+  width: 70%;
+  height: 30%;
+}
+
+.cadre2 {
+  max-width: 320px;
+  width: 100%;
+  height: 220px;
+  top: 0;
+  left: 34%;
+  left: 285px;
+  left: calc(50% - 160px);
+
+  height: 25%; 
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+}
+.cadre3 {
+  width: 130px;
+  height: 220px;
+  top: 10%;
+  top: 100px;
+  right: 0;
+  right: calc(50% - 410px);
+  padding: 15px;
+  margin-top: 30px;
+  margin-left: 30px;
+
+  height: 20%; 
+  width: 50%;
+}
+.cadre4 {
+  width: 300px;
+  height: 200px;
+  bottom: 4%;
+  bottom: 50px;
+  bottom: calc(50% - 300px);
+  left: 0%;
+  left: calc(50% - 470px);
+  padding: 13px;
+  background-image: linear-gradient(to bottom, #c30045 0%, #c30045 100%), linear-gradient(to bottom, white 0%, white 100%);
+  margin: 10px;
+
+  height: 25%; 
+  width: 90%;
+}
+.cadre5 {
+  height: 350px;
+  width: 200px;
+  padding: 20px;
+  margin: 50px 0 50px 11%;
+
+  height: 40%; 
+  width: 80%;
+  background-size: cover;
+  background-position: center;
+}
+
+.cadre6 {
+  width: 250px;
+  height: 250px;
+  padding: 25px;
+  margin: 70px 0;
+  position: relative;
+  /* right: 65px; */
+  height: 30%;
+  width: 95%;
+}
+.cadre7 {
+  position: relative;
+  width: 230px;
+  height: 150px;
+  padding: 25px;
+  margin: 40px;
+  left: 10%;
+  width: 80%;
+  height: 15%;
+}
+.cadre8 {
+  width: 150px;
+  height: 250px;
+  margin-left: 50px;
+  padding: 15px;
+
+  width: 60%;
+  height:  30%;
+}
+.cadre9 {
+  height: 280px;
+  width: 150px;
+  padding: 10px;
+
+  height: 30%; 
+  width: 70%;
+  position: absolute;
+  right: 0px;
+}
+
+.cadre4 .trait {
+  background-color: #425c6c;
+}
+
+.section_cadre>div:nth-child(3) {
+  display: none;
+}
+
+@media(min-width: 450px){
+  .section_cadre>div:nth-child(3) {
+    display: block;
   }
 }
+@media(min-width: 900px){
+  .section_cadre {
+    width: 80%;
+  }
+
+}
+
+.anim:hover {
+  animation: anim 0.5s 0.2s ease;
+}
+@keyframes anim {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+
+

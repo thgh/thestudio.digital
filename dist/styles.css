@@ -69,7 +69,6 @@ canvas {
   width: 30vw;
   justify-content: space-around;
   align-items: baseline;
-  color: white;
   text-transform: uppercase;
   padding-top: 4vh;
 }
@@ -159,20 +158,50 @@ nav a{
   }
 }
 
+/* SECTION 4 - CONTACT US - */
 
+.section4 {
+    margin-top: 10vh;
+}
 
-
-
-
-
-
+.section4 {
+    height: 320px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c30045;
+    padding: 8vh 10vw;
+}
 
 /* SECTION 5 -- Photo */
 
 .section_photos {
-  height:35vh;
-  background-color: #425c6c;
+  height:320px;
+  width: 100%;
+  background-size: cover;
   margin-top: 10vh;
+}
+
+.section_photos {
+  overflow: hidden;
+}
+
+.sliding {
+  background: url(./assets/banniere.jpg) repeat-x;
+  background-size: cover;
+  height: 100%;
+  width: 2048px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
 }
 
 
