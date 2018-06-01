@@ -193,10 +193,10 @@ nav a{
 }
 
 .sliding {
-  background: url(./assets/test_gallerie.jpg) repeat-x;
+  background: url(./assets/test_gallerie.png) repeat-x;
   background-size: cover;
   height: 100%;
-  width: 3020px;
+  width: 2048px;
   animation: slide 60s linear infinite;
 }
 
