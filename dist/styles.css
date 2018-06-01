@@ -188,10 +188,10 @@ nav a{
 }
 
 .sliding {
-  background: url(./assets/banniere.jpg) repeat-x;
+  background: url(./assets/test_gallerie.jpg) repeat-x;
   background-size: cover;
   height: 100%;
-  width: 2048px;
+  width: 3020px;
   animation: slide 60s linear infinite;
 }
 
