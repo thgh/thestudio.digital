@@ -1,13 +1,5 @@
-
 .nav_desktop>a {
   color: #425c6c;
-}
-
-.section_img {
-  height: 45vh;
-  background-image: url(./assets/career.jpg);
-  background-size: cover;
-  background-position: bottom;
 }
 
 .section_intro {
