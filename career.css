@@ -1,12 +1,6 @@
 .section_cadre a:hover {
     transform: none;
 }
-.section_img {
-  height: 45vh;
-  background-image: url(./assets/career.jpg);
-  background-size: cover;
-  background-position: bottom;
-}
 .section_intro {
   padding-bottom: 0;
 }

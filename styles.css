@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'Belfius Regular';
-    src: url('./assets/BelfiusNormal_regular.ttf'); 
+    src: url('./assets/font/BelfiusNormal_regular.ttf'); 
     font-style: normal;
     font-weight: normal;
 }
@@ -186,8 +186,8 @@ nav a{
 }
 
 .sliding {
-  background: url(./assets/gallerie.png) repeat-x;
-  height: 560px;
+  background: url(./assets/img/gallerie.png) repeat-x;
+  height: 320px;
   width: 16276px;
   animation: slide 120s linear infinite;
 
@@ -199,7 +199,7 @@ nav a{
   height: 100%;
   width: 100%;
 
-  background-image: url(./assets/panorama.jpg);
+  background-image: url(./assets/img/panorama.jpg);
   background-size: cover;
   background-position: bottom;
   z-index: -3;
