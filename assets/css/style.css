@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Belfius Regular';
-    src: url('./assets/font/BelfiusNormal_regular.ttf'); 
+    src: url('./../font/BelfiusNormal_regular.ttf'); 
     font-style: normal;
     font-weight: normal;
 }
@@ -16,7 +16,7 @@ body{
   width:100vw;
   height:100vh;
   font-family:"Belfius Regular", "Arial";
-  background-image: url(./assets/img/background.jpg);
+  background-image: url(./../img/background.jpg);
   background-size: cover;
   background-position: center;
   position:relative;

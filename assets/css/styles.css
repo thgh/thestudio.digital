@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'Belfius Regular';
-    src: url('./assets/font/BelfiusNormal_regular.ttf'); 
+    src: url('./../font/BelfiusNormal_regular.ttf'); 
     font-style: normal;
     font-weight: normal;
 }
@@ -77,7 +77,7 @@ canvas {
   text-transform: uppercase;
   padding-top: 4vh;
 }
-.nav_desktop a {
+.nav_desktop > a {
   padding-bottom: 2px;
 }
 nav .active {
@@ -117,19 +117,19 @@ nav .active {
 .nav_mobile:hover .nav_mobile_drop {
   transform: translateY(-5vh);
 }
-.nav_mobile_drop a{
+.nav_mobile_drop > a{
   color: white;
 }
 body .display {
   display: flex;
   transform : translateY(0px);
 }
-nav>div{ 
+nav>div, .nav_lang a{ 
   color: #c30045;
   font-size: 0.7rem;
   cursor: pointer;
 }
-nav a{
+nav > a{
   cursor: pointer;
 }
 .nav_lang {
@@ -186,7 +186,7 @@ nav a{
 }
 
 .sliding {
-  background: url(./assets/img/gallerie.png) repeat-x;
+  background: url(./../img/gallerie.png) repeat-x;
   height: 320px;
   width: 16276px;
   animation: slide 120s linear infinite;
@@ -199,7 +199,7 @@ nav a{
   height: 100%;
   width: 100%;
 
-  background-image: url(./assets/img/panorama.jpg);
+  background-image: url(./../img/panorama.jpg);
   background-size: cover;
   background-position: bottom;
   z-index: -3;
