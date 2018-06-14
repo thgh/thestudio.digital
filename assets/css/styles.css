@@ -188,7 +188,7 @@ nav > a{
 .sliding {
   background: url(./../img/gallerie.png) repeat-x;
   height: 320px;
-  width: 16276px;
+  width: 11869px;
   animation: slide 120s linear infinite;
 
 }
