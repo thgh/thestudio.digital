@@ -303,8 +303,17 @@
   }
 }
 
-.modal h1, .modal h2 .modal h3 {
+.modal h1, h2, h3 {
   color: #c30045
   margin-bottom:15px;
   margin-top: 15px;
 }
+
+.modal p
+
+{
+  
+  margin-bottom:15px;
+  
+}
+
