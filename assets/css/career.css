@@ -302,3 +302,9 @@
     transform: rotate(0);
   }
 }
+
+.modal h1, .modal h2 .modal h3 {
+  color: #c30045
+  margin-bottom:15px;
+  margin-top: 15px;
+}
