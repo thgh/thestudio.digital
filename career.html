@@ -2,353 +2,484 @@
 <html lang="en">
 
 <head>
-  <title>The Studio | A Belfius subsidiary dedicated to digital innovation</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="the studio, the studio digital, studio digital, studio, belfius studio, startup, startup studio, startup studio belge">
-  <meta name="description" content="Our mission is to design world-class digital experiences for our customers, our partners and Belfius. The Studio and its Innovation Lab is a place where our talented people have time to do research and prototype on innovative ideas.">
-  <link rel="shortcut icon" href="./assets/img/thestudio_logo.png">
-  <link rel="stylesheet" href="./assets/css/styles.css">
-  <link rel="stylesheet" href="./assets/css/home.css">
-  <link rel="stylesheet" href="./assets/css/career.css">
+ <title>The Studio | A Belfius subsidiary dedicated to digital innovation</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="keywords" content="the studio, the studio digital, studio digital, studio, belfius studio, startup, startup studio, startup studio belge">
+ <meta name="description" content="Our mission is to design world-class digital experiences for our customers, our partners and Belfius. The Studio and its Innovation Lab is a place where our talented people have time to do research and prototype on innovative ideas.">
+ <link rel="shortcut icon" href="./assets/img/thestudio_logo.png">
+ <link rel="stylesheet" href="./assets/css/styles.css">
+ <link rel="stylesheet" href="./assets/css/home.css">
+ <link rel="stylesheet" href="./assets/css/career.css">
 </head>
 
 <body>
-  <div id="app" style="visibility: hidden;">
-    <!-- HEADER -->
-    <header class="header">
-      <a :href="'./home.html?language='+language">
-        <img src="./assets/img/thestudio_logo.svg" class="header-logo" alt="The Studio Full Logo">
-      </a>
-      <nav class="nav_mobile">
-        <div></div>
-        <div></div>
-        <div></div>
-      </nav>
-      <nav class="nav_mobile_drop">
-        <a :href="'./home.html?language='+language">{{ content.nav.home[language] }}</a>
-        <a class="active" :href="'./career.html?language='+language">{{ content.nav.career[language] }}</a>
-        <a href="#contact">{{ content.nav.contact[language] }}</a>
-        <div class="nav_lang">
-          <p>{{ language }} ⌵</p>
-          <div class="nav_lang_drop">
-            <a v-for="lg in languages" @click.prevent="language = lg">{{ lg }}</a>
-          </div>
-        </div>
-        <a class="close">X</a>
-      </nav>
-      <nav class="nav_desktop">
-        <a :href="'./home.html?language='+language">{{ content.nav.home[language] }}</a>
-        <a class="active" :href="'./career.html?language='+language">{{ content.nav.career[language] }}</a>
-        <a href="#contact">{{ content.nav.contact[language] }}</a>
-        <div class="nav_lang">
-          <p>{{ language }} ⌵</p>
-          <div class="nav_lang_drop">
-            <a v-for="lg in languages" @click.prevent="language = lg">{{ lg }}</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- CONTENT -->
-    <div id="bubble">
-      <section class="section_intro">
-        <h1 class="scroll_anim">
-          <div v-html="content.intro.title[language]"></div>
-          <div v-html="content.intro.subtitle[language]"></div>
-        </h1>
-        <img src="./assets/img/trait.png" alt="----">
-        <p class="scroll_anim" v-html="content.mission[language]"></p>
-      </section>
-      <section class="section_cadre">
-        <div>
-          <img class="cadre1" src="./assets/img/career/tiz1_cadre.jpg" onmouseover="this.src='./assets/img/career/tiz2_cadre.jpg'"
-            onmouseout="this.src='./assets/img/career/tiz1_cadre.jpg'">
-          <div id="cadre2" class="cadre cadre2 annonce anim" href="https://www.belfius.be/webapps/fr/jobs/detail/00004712">
-            <img src="../assets/img/career/annonce2.jpg">
-          </div>
-          <img class="cadre3" src="../assets/img/career/pengo2.jpg" onmouseover="this.src='../assets/img/career/pengo1.jpg'" onmouseout="this.src='../assets/img/career/pengo2.jpg'">
-        </div>
-        <div>
-          <img class="cadre4" src="./assets/img/career/group1.jpg" onmouseover="this.src='./assets/img/career/group2.jpg'" onmouseout="this.src='./assets/img/career/group1.jpg'">
-          <img class="cadre5" src="./assets/img/career/ronny1_cadre.jpg" onmouseover="this.src='./assets/img/career/ronny2_cadre.jpg'"
-            onmouseout="this.src='./assets/img/career/ronny1_cadre.jpg'">
-          <img class="cadre6" src="./assets/img/career/mad1_cadre.jpg" onmouseover="this.src='./assets/img/career/mad2_cadre.jpg'"
-            onmouseout="this.src='./assets/img/career/mad1_cadre.jpg'">
-        </div>
-        <div>
-          <div id="cadre7" class="cadre cadre7 annonce anim" href="https://www.belfius.be/webapps/fr/jobs/detail/00004712">
-            <img src="../assets/img/career/annonce1.jpg">
-          </div>
-          <img class="cadre8" src="./assets/img/career/sara1_cadre.jpg" onmouseover="this.src='./assets/img/career/sara2_cadre.jpg'"
-            onmouseout="this.src='./assets/img/career/sara1_cadre.jpg'">
-          <img class="cadre9" src="./assets/img/career/group3.jpg" onmouseover="this.src='./assets/img/career/group4.jpg'" onmouseout="this.src='./assets/img/career/group3.jpg'">
-        </div>
-      </section>
-      <!-- RECRUITING -->
-      <section class="section4 scroll_anim">
-        <h3>{{ content.recruiting.work_with_us[language] }}</h3>
-        <div class="trait"></div>
-        <p>{{ content.recruiting.one_click_away[language] }}</p>
-        <a href="./career.html">{{ content.recruiting.career[language] }}</a>
-      </section>
-      <!-- CONTACT -->
-      <section class="section_contact">
-        <div class="bg"></div>
-        <h3 class="scroll_anim">{{ content.contact.title[language] }}</h3>
-        <div class="trait"></div>
-        <div class="contact scroll_anim" id="contact">
-          <a href="https://www.google.be/maps/place/Rue+de+l'Ecuyer+48,+1000+Bruxelles/@50.8488224,4.3534237,17z/data=!4m5!3m4!1s0x47c3c3808a07138f:0x86f3926cb9b4a3d5!8m2!3d50.8488149!4d4.3556122">
-            <img src="./assets/img/address.svg" target="_blank">
-            <p>{{ content.contact.address[language] }}</p>
-            <p>48 rue de l'ecuyer, 1000 Bxl</p>
-          </a>
-          <a href="tel:+3222220936">
-            <img src="./assets/img/phone.svg">
-            <p>{{ content.contact.phone[language] }}</p>
-            <p>02/222.09.36</p>
-          </a>
-          <a href="mailto:info@thestudio.digital">
-            <img src="./assets/img/mail.svg">
-            <p>{{ content.contact.email[language] }}</p>
-            <p>info@thestudio.digital</p>
-          </a>
-        </div>
-        <a href="https://www.linkedin.com/company/the-studio-belfius/" target="_blank" class="linkedin">
-          <img src="./assets/img/linkedin_rond.svg" alt="Linkedin">
-        </a>
-      </section>
-    </div>
-    <!-- MODALS -->
-    <div id="modal-cadre2" class="modal">
-      <div class="modal-content">
-        <span id="close-cadre2" class="modal-close ">&times;</span>
-        <p>Cadre 2 - Pour MAD</p>
-      </div>
-    </div>
-    <div id="modal-cadre7" class="modal">
-      <div class="modal-content">
-        <span id="close-cadre7" class="modal-close ">&times;</span>
-        <h1>Fullstack Web Developer</h1>
-        <h2>Que contient le job?</h2>
-        <p>La révolution numérique actuelle génère de nombreuses opportunités qui vont bien au-delà des activités de bancassurance
-          classiques en Belgique. La croissance des startups actives dans le domaine de la FinTech, de l’InsurTech et de
-          la RegTech en est la parfaite illustration. Alors que bon nombre de banques traditionnelles considèrent ces nouveaux-venus
-          comme une menace pour leur modèle d’entreprise, Belfius voit dans cette évolution quelques opportunités extrêmement
-          prometteuses. Le Studio a été créé dans le but de mettre en place un écosystème d’idées et de partenaires, afin
-          de commercialiser des produits technologiques en Belgique et à l’étranger. Ces produits peuvent être le fruit de
-          ressources déjà développées au sein de la banque, telles que la robotique ou le mobile banking, ou d’idées testées
-          dans le Studio et jugées susceptibles de déboucher sur des solutions concrètes et crédibles. Pour développer ces
-          solutions, nous sommes à la recherche de nouveaux collaborateurs, et plus précisément d’un Développeur Full Stack</p>
-        <h3>Tâches et responsabilités</h3>
-        <p>En tant que développeur Web Full Stack, vous devrez :</p>
-        <ul>
-          <li>contribuer au développement et fournir de nouvelles fonctionnalités pour des produits fonctionnels comptant des
-            milliers d’utilisateurs ;</li>
-          <li>alimenter et prototyper notre pipeline de produits ;</li>
-          <li>explorer les changements technologiques ;</li>
-          <li>concevoir, posséder et fournir des composants front-end et back-end ;</li>
-          <li>concevoir et développer des bases de données ;</li>
-          <li>tester votre code. Le mettre en production. Prendre du plaisir.</li>
-
-        </ul>
-        <h3>Compétences</h3>
-        <p>Connaissances approfondies et expérience significative dans les domaines suivants :</p>
-        <ul>
-          <li>un langage back-end de votre choix (Node.js, PHP, Python, Java, etc.) ;</li>
-          <li>un(e) framework/bibliothèque Web front-end récent(e) (Vue, React, Angular, etc.) ;</li>
-          <li>Applications Web progressives ;</li>
-          <li>HTML/CSS/JS ;</li>
-          <li>un SGBDR ;</li>
-          <li>la connaissance d’AWS constitue un atout significatif.</li>
-        </ul>
-        <h2>Profil</h2>
-
-        <ul>
-          <li>vous entendez offrir la meilleure expérience possible aux utilisateurs de votre application ;</li>
-          <li>vous êtes capable de vous adapter aux changements de circonstances (flexibilité) et de travailler de manière autonome
-            en suivant les dernières tendances, techniques et technologies Web ;</li>
-          <li>vous vous intéressez aux technologies innovantes telles que les chatbots, l’intelligence artificielle, la blockchain,
-            l’Internet des objets, etc. ;</li>
-          <li>vous êtes francophone ou néerlandophone et disposez d’une bonne connaissance de l’anglais ;</li>
-          <li>vous êtes titulaire d’un bachelier ou d’un master en TIC ou en sciences informatiques ;</li>
-          <li>vous êtes capable de travailler et de communiquer efficacement dans une équipe restreinte et responsabilisée ;</li>
-          <li>vous êtes volontaire et souhaitez sans cesse trouver des solutions et de nouveaux moyens de vous améliorer, même
-            si cela nécessite l’apprentissage d’une nouvelle technologie ;</li>
-          <li>vous êtes altruiste et contribuez activement à l’esprit d’équipe ;</li>
-          <li>vous disposez de bonnes compétences organisationnelles, notamment la capacité à prioriser les tâches et à respecter
-            les délais ;</li>
-          <li>vous êtes capable d’exprimer clairement vos idées et points de vue, que ce soit oralement ou par écrit ;</li>
-          <li>vous êtes curieux et passionné par ce que vous faites.</li>
-        </ul>
-        <h2>Offre </h2>
-        <ul>
-          <li>la possibilité de travailler dans un environnement de startup avec le soutien de Belfius ;</li>
-          <li>un package salarial compétitif ;</li>
-          <li>des avantages extralégaux ;</li>
-          <li>la possibilité de faire du télétravail une fois par semaine ;</li>
-          <li>une atmosphère de startup : </li>
-          <li>* de super bureaux, ainsi que des boissons et un petit déjeuner servis quotidiennement ;</li>
-          <li>* vitesse, liberté et indépendance.</li>
-        </ul>
-        <h2>Comment postuler</h2>
-        <p>Pour postuler, envoyez-nous votre CV à l’adresse careers@thestudio.digital en indiquant « Fullstack developer – Prénom
-          Nom » en objet. N’hésitez pas à mentionner toute information pertinente pour démontrer vos compétences, par exemple
-          des croquis, des dessins et (un lien vers) votre portfolio. Nous nous réjouissons d’avoir de vos nouvelles !</p>
-      </div>
-    </div>
-  </div>
-  <!-- vue -->
-  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <!-- bodymovin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin_light.min.js" integrity="sha256-iTdjzqVpr4H+lO7ca1ip4EY9wE/CCXz/xcDJPL3sX24="
-    crossorigin="anonymous"></script>
-  <!-- particles -->
-  <script src="./assets/js/particles.js"></script>
-  <!-- animation -->
-  <script type="text/javascript" src="./assets/js/animation.js"></script>
-  <script>
-    var cadre2 = document.getElementById('cadre2');
-    var modalCadre2 = document.getElementById('modal-cadre2');
-    var closeCadre2 = document.getElementById('close-cadre2');
-    var cadre7 = document.getElementById('cadre7');
-    var modalCadre7 = document.getElementById('modal-cadre7');
-    var closeCadre7 = document.getElementById('close-cadre7');
-    cadre2.onclick = function () {
-      modalCadre2.style.display = "block";
-    }
-    cadre7.onclick = function () {
-      modalCadre7.style.display = "block";
-    }
-    closeCadre2.onclick = function () {
-      modalCadre2.style.display = "none";
-      modalCadre7.style.display = "none";
-    }
-    closeCadre7.onclick = function () {
-      modalCadre2.style.display = "none";
-      modalCadre7.style.display = "none";
-    }
-    window.onclick = function (event) {
-      if (event.target == modalCadre2 || event.target == modalCadre7) {
-        modalCadre2.style.display = "none";
-        modalCadre7.style.display = "none";
-      }
-    }
-  </script>
-  <script>
-    new Vue({
-      el: '#app',
-      created: function () {
-        document.getElementById('app').style.visibility = 'visible';
-        function getUrlParameter(name) {
-          name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-          var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-          var results = regex.exec(location.search);
-          return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        }
-        var language = getUrlParameter('language');
-        this.language = language || 'en';
-      },
-      data: function () {
-        return {
-          language: 'en',
-          languages: ['en', 'fr', 'nl'],
-          content: {
-            nav: {
-              home: {
-                en: 'Home',
-                fr: 'Accueil',
-                nl: 'Home'
-              },
-              career: {
-                en: 'Career',
-                fr: 'Carrière',
-                nl: 'Carriere'
-              },
-              contact: {
-                en: 'Contact',
-                fr: 'Contact',
-                nl: 'Contact'
-              }
-            },
-            intro: {
-              title: {
-                en: 'Join @ <span>Wall of fame</span>',
-                fr: 'Rejoignez notre <span>"Wall of fame"</span>',
-                nl: 'Krijg je eigen plekje op onze <span>Wall of fame</span>'
-              },
-              subtitle: {
-                en: 'Great things are never done <span>alone.</span>',
-                fr: 'Et construisons <span>ensemble</span> les solutions de demain!',
-                nl: '<span>samen</span> bouwen we aan de toekomst!'
-              }
-            },
-            mission: {
-              en: 'We always seek to co-create with talented and diverse partners. You are only one click away to be part of our bright and passionate team. And if you are looking for a internship, do not hesitate to reach out to us as well.',
-              fr: 'Nous sommes toujours à la recherche de partenaires et collaborateurs motivés. Vous êtes à seulement un click de faire partie de notre équipe de passionnés. Nous recrutons régulièrement des stagiaires, n’hésitez pas à nous contacter.',
-              nl: 'We zijn steeds op zoek naar een interessante samenwerking met getalenteerde en diverse partners. U kan hier deel uitmaken! Ben je op zoek naar een toffe stageplek ? Aarzel niet en neem contact met ons op!'
-            },
-            recruiting: {
-              work_with_us: {
-                en: 'WORK WITH US',
-                fr: 'Rejoignez-nous',
-                nl: 'Werk met ons!'
-              },
-              one_click_away: {
-                en: 'You are only one click away to be part of our wonderful team',
-                fr: 'Vous êtes à un clic de faire partie de notre super équipe',
-                nl: 'U bent op één toets verder om deel te zijn van ons geweldig team!'
-              },
-              career: {
-                en: 'Career',
-                fr: 'Carrière',
-                nl: 'Carriere'
-              }
-            },
-            contact: {
-              title: {
-                en: "Contact us and let's start to innovate",
-                fr: 'Contactez-nous et innovons ensemble',
-                nl: 'Neem contact met ons op en laat het innoveren starten!'
-              },
-              address: {
-                en: 'Address',
-                fr: 'Adresse',
-                nl: 'Adres'
-              },
-              phone: {
-                en: 'Phone',
-                fr: 'Téléphone',
-                nl: 'Telefoon'
-              },
-              email: {
-                en: 'Email',
-                fr: 'Email',
-                nl: 'E-mail'
-              }
-            }
-          }
-        }
-      },
-      watch: {
-        language: function (language) {
-          let title = 'The Studio | A Belfius subsidiary dedicated to digital innovation'
-          switch (language) {
-            case 'fr':
-              title = 'The Studio | Une filiale de Belfius dédiée à l’innovation digitale'
-              break;
-            case 'nl':
-              title = 'The Studio | Een Belfius dochteronderneming toegewijd aan digitale innovatie.'
-              break;
-          }
-          window.document.title = title;
-        }
-      }
-    })
-  </script>
+ <div id="app" style="visibility: hidden;">
+ <!-- HEADER -->
+ <header class="header">
+ <a :href="'./home.html?language='+language">
+ <img src="./assets/img/thestudio_logo.svg" class="header-logo" alt="The Studio Full Logo">
+ </a>
+ <nav class="nav_mobile">
+ <div></div>
+ <div></div>
+ <div></div>
+ </nav>
+ <nav class="nav_mobile_drop">
+ <a :href="'./home.html?language='+language">{{ content.nav.home[language] }}</a>
+ <a class="active" :href="'./career.html?language='+language">{{ content.nav.career[language] }}</a>
+ <a href="#contact">{{ content.nav.contact[language] }}</a>
+ <div class="nav_lang">
+ <p>{{ language }} ⌵</p>
+ <div class="nav_lang_drop">
+ <a v-for="lg in languages" @click.prevent="language = lg">{{ lg }}</a>
+ </div>
+ </div>
+ <a class="close">X</a>
+ </nav>
+ <nav class="nav_desktop">
+ <a :href="'./home.html?language='+language">{{ content.nav.home[language] }}</a>
+ <a class="active" :href="'./career.html?language='+language">{{ content.nav.career[language] }}</a>
+ <a href="#contact">{{ content.nav.contact[language] }}</a>
+ <div class="nav_lang">
+ <p>{{ language }} ⌵</p>
+ <div class="nav_lang_drop">
+ <a v-for="lg in languages" @click.prevent="language = lg">{{ lg }}</a>
+ </div>
+ </div>
+ </nav>
+ </header>
+ <!-- CONTENT -->
+ <div id="bubble">
+ <section class="section_intro">
+ <h1 class="scroll_anim">
+ <div v-html="content.intro.title[language]"></div>
+ <div v-html="content.intro.subtitle[language]"></div>
+ </h1>
+ <img src="./assets/img/trait.png" alt="----">
+ <p class="scroll_anim" v-html="content.mission[language]"></p>
+ </section>
+ <section class="section_cadre">
+ <div>
+ <img class="cadre1" src="./assets/img/career/tiz1_cadre.jpg" onmouseover="this.src='./assets/img/career/tiz2_cadre.jpg'"
+ onmouseout="this.src='./assets/img/career/tiz1_cadre.jpg'">
+ <div id="cadre2" class="cadre cadre2 annonce anim" @click="e => toggleModal(1)">
+ <img src="../assets/img/career/annonce2.jpg">
+ </div>
+ <img class="cadre3" src="../assets/img/career/pengo2.jpg" onmouseover="this.src='../assets/img/career/pengo1.jpg'" onmouseout="this.src='../assets/img/career/pengo2.jpg'">
+ </div>
+ <div>
+ <img class="cadre4" src="./assets/img/career/group1.jpg" onmouseover="this.src='./assets/img/career/group2.jpg'" onmouseout="this.src='./assets/img/career/group1.jpg'">
+ <img class="cadre5" src="./assets/img/career/ronny1_cadre.jpg" onmouseover="this.src='./assets/img/career/ronny2_cadre.jpg'"
+ onmouseout="this.src='./assets/img/career/ronny1_cadre.jpg'">
+ <img class="cadre6" src="./assets/img/career/mad1_cadre.jpg" onmouseover="this.src='./assets/img/career/mad2_cadre.jpg'"
+ onmouseout="this.src='./assets/img/career/mad1_cadre.jpg'">
+ </div>
+ <div>
+ <div id="cadre7" class="cadre cadre7 annonce anim" @click="e => toggleModal(2)">
+ <img src="../assets/img/career/annonce1.jpg">
+ </div>
+ <img class="cadre8" src="./assets/img/career/sara1_cadre.jpg" onmouseover="this.src='./assets/img/career/sara2_cadre.jpg'"
+ onmouseout="this.src='./assets/img/career/sara1_cadre.jpg'">
+ <img class="cadre9" src="./assets/img/career/group3.jpg" onmouseover="this.src='./assets/img/career/group4.jpg'" onmouseout="this.src='./assets/img/career/group3.jpg'">
+ </div>
+ </section>
+ <!-- RECRUITING -->
+ <section class="section4 scroll_anim">
+ <h3>{{ content.recruiting.work_with_us[language] }}</h3>
+ <div class="trait"></div>
+ <p>{{ content.recruiting.one_click_away[language] }}</p>
+ <a href="./career.html">{{ content.recruiting.career[language] }}</a>
+ </section>
+ <!-- CONTACT -->
+ <section class="section_contact">
+ <div class="bg"></div>
+ <h3 class="scroll_anim">{{ content.contact.title[language] }}</h3>
+ <div class="trait"></div>
+ <div class="contact scroll_anim" id="contact">
+ <a href="https://www.google.be/maps/place/Rue+de+l'Ecuyer+48,+1000+Bruxelles/@50.8488224,4.3534237,17z/data=!4m5!3m4!1s0x47c3c3808a07138f:0x86f3926cb9b4a3d5!8m2!3d50.8488149!4d4.3556122">
+ <img src="./assets/img/address.svg" target="_blank">
+ <p>{{ content.contact.address[language] }}</p>
+ <p>48 rue de l'ecuyer, 1000 Bxl</p>
+ </a>
+ <a href="tel:+3222220936">
+ <img src="./assets/img/phone.svg">
+ <p>{{ content.contact.phone[language] }}</p>
+ <p>02/222.09.36</p>
+ </a>
+ <a href="mailto:info@thestudio.digital">
+ <img src="./assets/img/mail.svg">
+ <p>{{ content.contact.email[language] }}</p>
+ <p>info@thestudio.digital</p>
+ </a>
+ </div>
+ <a href="https://www.linkedin.com/company/the-studio-belfius/" target="_blank" class="linkedin">
+ <img src="./assets/img/linkedin_rond.svg" alt="Linkedin">
+ </a>
+ </section>
+ </div>
+ <!-- MODALS -->
+ <div id="modal1" class="modal" :style="{display: modals['1'] ? 'block' : 'none'}">
+ <div class="modal-content">
+ <span class="modal-close" @click="e => toggleModal(1)">&times;</span>
+ <h1>{{ content.jobs.job2.position[language] }}</h1>
+ <h2>{{ content.jobs.job2.description_title[language] }}</h2>
+ <p>{{ content.jobs.job2.description_text[language] }}</p>
+ <h3>{{ content.jobs.job2.responsibilities_title[language] }}</h3>
+ <p>{{ content.jobs.job2.responsibilities_intro[language] }}</p>
+ <ul>
+ <li v-for="r in content.jobs.job2.responsibilities_list[language]">{{ r }}</li>
+ </ul>
+ <h3>{{ content.jobs.job2.skills_title[language] }}</h3>
+ <p>{{ content.jobs.job2.skills_intro[language] }}</p>
+ <ul>
+ <li v-for="s in content.jobs.job2.skills_list[language]">{{ s }}</li>
+ </ul>
+ <h2>{{ content.jobs.job2.profile_title[language] }}</h2>
+ <ul>
+ <li v-for="p in content.jobs.job2.profile_list[language]">{{ p }}</li>
+ </ul>
+ <h2>{{ content.jobs.job2.offer_title[language] }}</h2>
+ <ul>
+ <li v-for="o in content.jobs.job2.offer_list[language]">{{ o }}</li>
+ </ul>
+ <h2>{{ content.jobs.job2.apply_title[language] }}</h2>
+ <p>{{ content.jobs.job2.apply_text[language] }}</p>
+ </div>
+ </div>
+ <div id="modal2" class="modal" :style="{display: modals['2'] ? 'block' : 'none'}">
+ <div class="modal-content">
+ <span class="modal-close" @click="e => toggleModal(2)">&times;</span>
+ <h1>{{ content.jobs.job1.position[language] }}</h1>
+ <h2>{{ content.jobs.job1.description_title[language] }}</h2>
+ <p>{{ content.jobs.job1.description_text[language] }}</p>
+ <h3>{{ content.jobs.job1.responsibilities_title[language] }}</h3>
+ <p>{{ content.jobs.job1.responsibilities_intro[language] }}</p>
+ <ul>
+ <li v-for="r in content.jobs.job1.responsibilities_list[language]">{{ r }}</li>
+ </ul>
+ <h3>{{ content.jobs.job1.skills_title[language] }}</h3>
+ <p>{{ content.jobs.job1.skills_intro[language] }}</p>
+ <ul>
+ <li v-for="s in content.jobs.job1.skills_list[language]">{{ s }}</li>
+ </ul>
+ <h2>{{ content.jobs.job1.profile_title[language] }}</h2>
+ <ul>
+ <li v-for="p in content.jobs.job1.profile_list[language]">{{ p }}</li>
+ </ul>
+ <h2>{{ content.jobs.job1.offer_title[language] }}</h2>
+ <ul>
+ <li v-for="o in content.jobs.job1.offer_list[language]">{{ o }}</li>
+ </ul>
+ <h2>{{ content.jobs.job1.apply_title[language] }}</h2>
+ <p>{{ content.jobs.job1.apply_text[language] }}</p>
+ </div>
+ </div>
+ </div>
+ <!-- vue -->
+ <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+ <!-- jquery -->
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+ <!-- bodymovin -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin_light.min.js" integrity="sha256-iTdjzqVpr4H+lO7ca1ip4EY9wE/CCXz/xcDJPL3sX24="
+ crossorigin="anonymous"></script>
+ <!-- particles -->
+ <script src="./assets/js/particles.js"></script>
+ <!-- animation -->
+ <script type="text/javascript" src="./assets/js/animation.js"></script>
+ <script>
+ new Vue({
+ el: '#app',
+ created: function () {
+ document.getElementById('app').style.visibility = 'visible';
+ function getUrlParameter(name) {
+ name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+ var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+ var results = regex.exec(location.search);
+ return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+ }
+ var language = getUrlParameter('language');
+ this.language = language || 'en';
+ var vue = this;
+ window.onclick = function (event) {
+ if (event.target.id == 'modal1' || event.target.id == 'modal2') {
+ vue.modals['1'] = false;
+ vue.modals['2'] = false;
+ }
+ }
+ },
+ methods: {
+ toggleModal: function (id) {
+ this.modals[id] = !this.modals[id]
+ }
+ },
+ data: function () {
+ return {
+ language: 'en',
+ languages: ['en', 'fr', 'nl'],
+ modals: {
+ 1: false,
+ 2: false
+ },
+ content: {
+ nav: {
+ home: {
+ en: 'Home',
+ fr: 'Accueil',
+ nl: 'Home'
+ },
+ career: {
+ en: 'Career',
+ fr: 'Carrière',
+ nl: 'Carriere'
+ },
+ contact: {
+ en: 'Contact',
+ fr: 'Contact',
+ nl: 'Contact'
+ }
+ },
+ intro: {
+ title: {
+ en: 'Join @ <span>Wall of fame</span>',
+ fr: 'Rejoignez notre <span>"Wall of fame"</span>',
+ nl: 'Krijg je eigen plekje op onze <span>Wall of fame</span>'
+ },
+ subtitle: {
+ en: 'Great things are never done <span>alone.</span>',
+ fr: 'Et construisons <span>ensemble</span> les solutions de demain!',
+ nl: '<span>samen</span> bouwen we aan de toekomst!'
+ }
+ },
+ mission: {
+ en: 'We always seek to co-create with talented and diverse partners. You are only one click away to be part of our bright and passionate team. And if you are looking for a internship, do not hesitate to reach out to us as well.',
+ fr: 'Nous sommes toujours à la recherche de partenaires et collaborateurs motivés. Vous êtes à seulement un click de faire partie de notre équipe de passionnés. Nous recrutons régulièrement des stagiaires, n’hésitez pas à nous contacter.',
+ nl: 'We zijn steeds op zoek naar een interessante samenwerking met getalenteerde en diverse partners. U kan hier deel uitmaken! Ben je op zoek naar een toffe stageplek ? Aarzel niet en neem contact met ons op!'
+ },
+ jobs: {
+ job1: {
+ position: {
+ fr: 'Fullstack Web Developer'
+ },
+ description_title: {
+ fr: 'Que contient le job?',
+ },
+ description_text: {
+ fr: 'La révolution numérique actuelle génère de nombreuses opportunités qui vont bien au-delà des activités de bancassurance classiques en Belgique. La croissance des startups actives dans le domaine de la FinTech, de l’InsurTech et de la RegTech en est la parfaite illustration. Alors que bon nombre de banques traditionnelles considèrent ces nouveaux-venus comme une menace pour leur modèle d’entreprise, Belfius voit dans cette évolution quelques opportunités extrêmement prometteuses. Le Studio a été créé dans le but de mettre en place un écosystème d’idées et de partenaires, afin de commercialiser des produits technologiques en Belgique et à l’étranger. Ces produits peuvent être le fruit de ressources déjà développées au sein de la banque, telles que la robotique ou le mobile banking, ou d’idées testées dans le Studio et jugées susceptibles de déboucher sur des solutions concrètes et crédibles. Pour développer ces solutions, nous sommes à la recherche de nouveaux collaborateurs, et plus précisément d’un Développeur Full Stack'
+ },
+ responsibilities_title: {
+ fr: 'Tâches et responsabilités'
+ },
+ responsibilities_intro: {
+ fr: 'En tant que développeur Web Full Stack, vous devrez :'
+ },
+ responsibilities_list: {
+ fr: [
+ 'contribuer au développement et fournir de nouvelles fonctionnalités pour des produits fonctionnels comptant des milliers d’utilisateurs',
+ 'alimenter et prototyper notre pipeline de produits',
+ 'explorer les changements technologiques',
+ 'concevoir, posséder et fournir des composants front-end et back-end',
+ 'concevoir et développer des bases de données',
+ 'tester votre code. Le mettre en production. Prendre du plaisir.'
+ ]
+ },
+ skills_title: {
+ fr: 'Compétences'
+ },
+ skills_intro: {
+ fr: 'Connaissances approfondies et expérience significative dans les domaines suivants :'
+ },
+ skills_list: {
+ fr: [
+ 'un langage back - end de votre choix(Node.js, PHP, Python, Java, etc.)',
+ 'un(e) framework/bibliothèque Web front-end récent(e) (Vue, React, Angular, etc.)',
+ 'Applications Web progressives',
+ 'HTML/CSS/JS',
+ 'un SGBDR',
+ 'la connaissance d’AWS constitue un atout significatif.'
+ ]
+ },
+ profile_title: {
+ fr: 'Profil'
+ },
+ profile_list: {
+ fr: [
+ 'vous entendez offrir la meilleure expérience possible aux utilisateurs de votre application ;',
+ 'vous êtes capable de vous adapter aux changements de circonstances (flexibilité) et de travailler de manière autonome en suivant les dernières tendances, techniques et technologies Web ;',
+ 'vous vous intéressez aux technologies innovantes telles que les chatbots, l’intelligence artificielle, la blockchain, l’Internet des objets, etc. ;',
+ 'vous êtes francophone ou néerlandophone et disposez d’une bonne connaissance de l’anglais ;',
+ 'vous êtes titulaire d’un bachelier ou d’un master en TIC ou en sciences informatiques ;',
+ 'vous êtes capable de travailler et de communiquer efficacement dans une équipe restreinte et responsabilisée ;',
+ 'vous êtes volontaire et souhaitez sans cesse trouver des solutions et de nouveaux moyens de vous améliorer, même si cela nécessite l’apprentissage d’une nouvelle technologie ;',
+ 'vous êtes altruiste et contribuez activement à l’esprit d’équipe ;',
+ 'vous disposez de bonnes compétences organisationnelles, notamment la capacité à prioriser les tâches et à respecter les délais ;',
+ 'vous êtes capable d’exprimer clairement vos idées et points de vue, que ce soit oralement ou par écrit ;',
+ 'vous êtes curieux et passionné par ce que vous faites.'
+ ]
+ },
+ offer_title: {
+ fr: 'Offre'
+ },
+ offer_list: {
+ fr: [
+ 'la possibilité de travailler dans un environnement de startup avec le soutien de Belfius ;',
+ 'un package salarial compétitif ;',
+ 'des avantages extralégaux ;',
+ 'la possibilité de faire du télétravail une fois par semaine ;',
+ 'une atmosphère de startup :',
+ '* de super bureaux, ainsi que des boissons et un petit déjeuner servis quotidiennement ;',
+ '* vitesse, liberté et indépendance.'
+ ]
+ },
+ apply_title: {
+ fr: 'Comment postuler'
+ },
+ apply_text: {
+ fr: 'Pour postuler, envoyez-nous votre CV à l’adresse careers@thestudio.digital en indiquant « Fullstack developer – Prénom Nom » en objet. N’hésitez pas à mentionner toute information pertinente pour démontrer vos compétences, par exemple des croquis, des dessins et (un lien vers) votre portfolio. Nous nous réjouissons d’avoir de vos nouvelles !'
+ }
+ },
+ job2: {
+ position: {
+ fr: 'Stages'
+ },
+ description_title: {
+ fr: 'Que contient le job?',
+ },
+ description_text: {
+ fr: 'La révolution numérique actuelle génère de nombreuses opportunités qui vont bien au-delà des activités de bancassurance classiques en Belgique. La croissance des startups actives dans le domaine de la FinTech, de l’InsurTech et de la RegTech en est la parfaite illustration. Alors que bon nombre de banques traditionnelles considèrent ces nouveaux-venus comme une menace pour leur modèle d’entreprise, Belfius voit dans cette évolution quelques opportunités extrêmement prometteuses. Le Studio a été créé dans le but de mettre en place un écosystème d’idées et de partenaires, afin de commercialiser des produits technologiques en Belgique et à l’étranger. Ces produits peuvent être le fruit de ressources déjà développées au sein de la banque, telles que la robotique ou le mobile banking, ou d’idées testées dans le Studio et jugées susceptibles de déboucher sur des solutions concrètes et crédibles. Pour développer ces solutions, nous sommes à la recherche de nouveaux collaborateurs, et plus précisément d’un Développeur Full Stack'
+ },
+ responsibilities_title: {
+ fr: 'Tâches et responsabilités'
+ },
+ responsibilities_intro: {
+ fr: 'En tant que développeur Web Full Stack, vous devrez :'
+ },
+ responsibilities_list: {
+ fr: [
+ 'contribuer au développement et fournir de nouvelles fonctionnalités pour des produits fonctionnels comptant des milliers d’utilisateurs',
+ 'alimenter et prototyper notre pipeline de produits',
+ 'explorer les changements technologiques',
+ 'concevoir, posséder et fournir des composants front-end et back-end',
+ 'concevoir et développer des bases de données',
+ 'tester votre code. Le mettre en production. Prendre du plaisir.'
+ ]
+ },
+ skills_title: {
+ fr: 'Compétences'
+ },
+ skills_intro: {
+ fr: 'Connaissances approfondies et expérience significative dans les domaines suivants :'
+ },
+ skills_list: {
+ fr: [
+ 'un langage back - end de votre choix(Node.js, PHP, Python, Java, etc.)',
+ 'un(e) framework/bibliothèque Web front-end récent(e) (Vue, React, Angular, etc.)',
+ 'Applications Web progressives',
+ 'HTML/CSS/JS',
+ 'un SGBDR',
+ 'la connaissance d’AWS constitue un atout significatif.'
+ ]
+ },
+ profile_title: {
+ fr: 'Profil'
+ },
+ profile_list: {
+ fr: [
+ 'vous entendez offrir la meilleure expérience possible aux utilisateurs de votre application ;',
+ 'vous êtes capable de vous adapter aux changements de circonstances (flexibilité) et de travailler de manière autonome en suivant les dernières tendances, techniques et technologies Web ;',
+ 'vous vous intéressez aux technologies innovantes telles que les chatbots, l’intelligence artificielle, la blockchain, l’Internet des objets, etc. ;',
+ 'vous êtes francophone ou néerlandophone et disposez d’une bonne connaissance de l’anglais ;',
+ 'vous êtes titulaire d’un bachelier ou d’un master en TIC ou en sciences informatiques ;',
+ 'vous êtes capable de travailler et de communiquer efficacement dans une équipe restreinte et responsabilisée ;',
+ 'vous êtes volontaire et souhaitez sans cesse trouver des solutions et de nouveaux moyens de vous améliorer, même si cela nécessite l’apprentissage d’une nouvelle technologie ;',
+ 'vous êtes altruiste et contribuez activement à l’esprit d’équipe ;',
+ 'vous disposez de bonnes compétences organisationnelles, notamment la capacité à prioriser les tâches et à respecter les délais ;',
+ 'vous êtes capable d’exprimer clairement vos idées et points de vue, que ce soit oralement ou par écrit ;',
+ 'vous êtes curieux et passionné par ce que vous faites.'
+ ]
+ },
+ offer_title: {
+ fr: 'Offre'
+ },
+ offer_list: {
+ fr: [
+ 'la possibilité de travailler dans un environnement de startup avec le soutien de Belfius ;',
+ 'un package salarial compétitif ;',
+ 'des avantages extralégaux ;',
+ 'la possibilité de faire du télétravail une fois par semaine ;',
+ 'une atmosphère de startup :',
+ '* de super bureaux, ainsi que des boissons et un petit déjeuner servis quotidiennement ;',
+ '* vitesse, liberté et indépendance.'
+ ]
+ },
+ apply_title: {
+ fr: 'Comment postuler'
+ },
+ apply_text: {
+ fr: 'Pour postuler, envoyez-nous votre CV à l’adresse careers@thestudio.digital en indiquant « Fullstack developer – Prénom Nom » en objet. N’hésitez pas à mentionner toute information pertinente pour démontrer vos compétences, par exemple des croquis, des dessins et (un lien vers) votre portfolio. Nous nous réjouissons d’avoir de vos nouvelles !'
+ }
+ }
+ },
+ recruiting: {
+ work_with_us: {
+ en: 'WORK WITH US',
+ fr: 'Rejoignez-nous',
+ nl: 'Werk met ons!'
+ },
+ one_click_away: {
+ en: 'You are only one click away to be part of our wonderful team',
+ fr: 'Vous êtes à un clic de faire partie de notre super équipe',
+ nl: 'U bent op één toets verder om deel te zijn van ons geweldig team!'
+ },
+ career: {
+ en: 'Career',
+ fr: 'Carrière',
+ nl: 'Carriere'
+ }
+ },
+ contact: {
+ title: {
+ en: "Contact us and let's start to innovate",
+ fr: 'Contactez-nous et innovons ensemble',
+ nl: 'Neem contact met ons op en laat het innoveren starten!'
+ },
+ address: {
+ en: 'Address',
+ fr: 'Adresse',
+ nl: 'Adres'
+ },
+ phone: {
+ en: 'Phone',
+ fr: 'Téléphone',
+ nl: 'Telefoon'
+ },
+ email: {
+ en: 'Email',
+ fr: 'Email',
+ nl: 'E-mail'
+ }
+ }
+ }
+ }
+ },
+ watch: {
+ language: function (language) {
+ let title = 'The Studio | A Belfius subsidiary dedicated to digital innovation'
+ switch (language) {
+ case 'fr':
+ title = 'The Studio | Une filiale de Belfius dédiée à l’innovation digitale'
+ break;
+ case 'nl':
+ title = 'The Studio | Een Belfius dochteronderneming toegewijd aan digitale innovatie.'
+ break;
+ }
+ window.document.title = title;
+ }
+ }
+ })
+ </script>
 </body>
 
 </html>
