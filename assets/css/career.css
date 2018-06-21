@@ -98,6 +98,7 @@
   .section_cadre > div > img {
     width: auto;
     max-width: 300px;
+    margin: 80px;
   }
 }
 
@@ -135,6 +136,7 @@
   .annonce img {
     width: auto;
     max-width: 300px;
+    margin: 80px;
   }
 }
 

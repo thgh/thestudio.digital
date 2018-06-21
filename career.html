@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" style="visibility: hidden;">
     <!-- HEADER -->
     <header class="header">
       <a :href="'./home.html?language='+language">
@@ -58,7 +58,7 @@
           <div v-html="content.intro.subtitle[language]"></div>
         </h1>
         <img src="./assets/img/trait.png" alt="----">
-        <p class="scroll_anim">{{ content.mission[language] }}</p>
+        <p class="scroll_anim" v-html="content.mission[language]"></p>
       </section>
       <section class="section_cadre">
         <div>
@@ -242,6 +242,7 @@
     new Vue({
       el: '#app',
       created: function () {
+        document.getElementById('app').style.visibility = 'visible';
         function getUrlParameter(name) {
           name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
           var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');

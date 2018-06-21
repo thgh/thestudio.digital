@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" style="visibility: hidden;">
         <!-- HEADER -->
         <header class="header">
             <a :href="'./home.html?language='+language">
@@ -63,9 +63,7 @@
                     <source src="./assets/img/home/animationthestudio.mp4" type="video/mp4" /> Your browser does not support the video tag.
                 </video>
             </div>
-            <p class="scroll_anim presentation">
-                {{ content.mission[language] }}
-            </p>
+            <p class="scroll_anim presentation" v-html="content.mission[language]"></p>
             <div class="projects scroll_anim">
                 <h2>{{ content.projects.title[language] }}</h2>
                 <img src="./assets/img/petit_trait.png" alt="--">
@@ -148,6 +146,7 @@
         new Vue({
             el: '#app',
             created: function () {
+                document.getElementById('app').style.visibility = 'visible';
                 function getUrlParameter(name) {
                     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
                     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -192,7 +191,7 @@
                             }
                         },
                         mission: {
-                            en: 'Our mission is to design digital experiences for our customers, our partners and Belfius. The Studio and its Innovation Lab is a place where our talented people have time to do research and prototype on innovative solutions.',
+                            en: 'Our mission is to design digital experiences for our customers, our partners and Belfius.<br>The Studio and its Innovation Lab is a place where our talented people have time to do research and prototype on innovative solutions.',
                             fr: 'Notre mission est de développer des solutions digitales pour nos clients, nos partenaires et Belfius.',
                             nl: 'Onze missie is het ontwikkelen van digitale oplossingen voor onze klanten , partners en Belfius. De innovation lab , is een plaats waar onze getalenteerde mensen de tijd en ruimte hebben om hun research uit te voeren om tot slot prototypes te creëren die leiden tot innovatieve oplossingen.'
                         },
