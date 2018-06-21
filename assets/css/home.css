@@ -10,7 +10,7 @@
   padding-top:20vh
 }
 .section_intro img {
-  width: 40%;
+  max-width: 300px;
   margin: 5vh;
 }
 .section_intro h1 {

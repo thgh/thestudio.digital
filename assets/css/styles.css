@@ -198,11 +198,11 @@ nav > a{
   position: absolute;
   height: 100%;
   width: 100%;
-
   background-image: url(./../img/panorama.jpg);
   background-size: cover;
   background-position: bottom;
   z-index: -3;
+  left: 0px;
 }
 .section_contact {
   /*min-height: 80vh;*/
@@ -285,7 +285,7 @@ nav > a{
 }
 
 .contact img, .career img {
-  width: 12%;
+  max-width: 60px;
   margin-bottom: 10px;
 }
 
