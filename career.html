@@ -123,6 +123,7 @@
  <div id="modal1" class="modal" :style="{display: modals['1'] ? 'block' : 'none'}">
  <div class="modal-content">
  <span class="modal-close" @click="e => toggleModal(1)">&times;</span>
+  <!-- JOB2 -->
  <h1>{{ content.jobs.job2.position[language] }}</h1>
  <h2>{{ content.jobs.job2.description_title[language] }}</h2>
  <p>{{ content.jobs.job2.description_text[language] }}</p>
@@ -145,9 +146,36 @@
  <li v-for="o in content.jobs.job2.offer_list[language]">{{ o }}</li>
  </ul>
  <h2>{{ content.jobs.job2.apply_title[language] }}</h2>
- <p>{{ content.jobs.job2.apply_text[language] }}</p>
+ <p v-bind="content.jobs.job2.apply_text[language]"></p>
+
+  <!-- JOB3 -->
+<h1>{{ content.jobs.job3.position[language] }}</h1>
+ <h2>{{ content.jobs.job3.description_title[language] }}</h2>
+ <p>{{ content.jobs.job3.description_text[language] }}</p>
+ <h3>{{ content.jobs.job3.responsibilities_title[language] }}</h3>
+ <p>{{ content.jobs.job3.responsibilities_intro[language] }}</p>
+ <ul>
+ <li v-for="r in content.jobs.job3.responsibilities_list[language]">{{ r }}</li>
+ </ul>
+ <h3>{{ content.jobs.job3.skills_title[language] }}</h3>
+ <p>{{ content.jobs.job3.skills_intro[language] }}</p>
+ <ul>
+ <li v-for="s in content.jobs.job3.skills_list[language]">{{ s }}</li>
+ </ul>
+ <h2>{{ content.jobs.job3.profile_title[language] }}</h2>
+ <ul>
+ <li v-for="p in content.jobs.job3.profile_list[language]">{{ p }}</li>
+ </ul>
+ <h2>{{ content.jobs.job3.offer_title[language] }}</h2>
+ <ul>
+ <li v-for="o in content.jobs.job3.offer_list[language]">{{ o }}</li>
+ </ul>
+ <h2>{{ content.jobs.job3.apply_title[language] }}</h2>
+ <p v-bind="content.jobs.job3.apply_text[language]"></p>
+
  </div>
  </div>
+
  <div id="modal2" class="modal" :style="{display: modals['2'] ? 'block' : 'none'}">
  <div class="modal-content">
  <span class="modal-close" @click="e => toggleModal(2)">&times;</span>
@@ -173,7 +201,7 @@
  <li v-for="o in content.jobs.job1.offer_list[language]">{{ o }}</li>
  </ul>
  <h2>{{ content.jobs.job1.apply_title[language] }}</h2>
- <p>{{ content.jobs.job1.apply_text[language] }}</p>
+ <p v-bind="content.jobs.job1.apply_text[language]"></p>
  </div>
  </div>
  </div>
@@ -451,6 +479,166 @@
  en: 'INNOVATION SOLUTIONS MANAGEMENT',
  fr: 'INNOVATION SOLUTIONS MANAGEMENT',
  nl: 'INNOVATION SOLUTIONS MANAGEMENT'
+ },
+ description_text: {
+ en: 'Since November 2016, Belfius has established "The Studio", with the main aim to diversify the bank s income by developing solutions based on new technologies and bringing them to market as quickly as possible. These solutions can come from innovative ideas developped  in the Studio or from existing assets within Belfius. The Innovation Lab is an entity of "The Studio" and its main aim is to stimulate and facilitate innovation by structuring ideas through an Innovation Funnel. It has been set up to select and challenge new ideas and new technologies to determine which ones need to be developed first. To achieve this, methods such as design thinking and fast prototyping are used. Finally, the Innovation Lab also likes to conduct experiments, conduct research, analyzes the market and meets many players in the sector of new technologies. The Studio and the Innovation Lab focus on different domains and technologies such as Internet of Things, mobile, cognitive learning, big data and blockchain.',
+ fr: 'Depuis novembre 2016 Belfius a créé « The Studio » dont l’ objectif principal est de diversifier les revenus de la banque en développant des solutions basées sur les nouvelles technologies et en les commercialisant au plus vite. Ces solutions peuvent venir d’idées innovantes développées au sein du Studio ou encore d’assets existants au sein de Belfius. L’Innovation Lab est une entité du Studio qui a comme objectif principal de stimuler et faciliter l’innovation en structurant les idées via un Innovation Funnel.  Celui-ci est mis en place afin de sélectionner et challenger les nouvelles idées et les nouvelles technologies afin de déterminer lesquelles doivent être développées en priorité. Pour réaliser cela, des méthodes de design thinking et fast prototyping sont utilisées. Enfin, l’Innovation Lab aime aussi mener des expériences, faire des recherches, analyser le marché et rencontrer de nombreux acteurs du secteur des nouvelles technologies. Le Studio et l’Innovation Lab se focalisent sur les différents domaines et technologies comme Internet of Things, mobile, cognitive learning, big data et blockchain.',
+ nl: 'Sinds november 2016 heeft Belfius "The Studio" opgericht, met als hoofddoel de inkomsten van de bank te diversifiëren door op basis van nieuwe technologieën oplossingen te ontwikkelen en deze zo snel mogelijk op de markt te brengen. Deze oplossingen kunnen komen van innovatieve ideeën die in de Studio zijn ontwikkeld of van bestaande activa binnen Belfius. Het Innovation Lab is een entiteit van “The Studio” en heeft als hoofddoel innovatie te stimuleren en te faciliteren door ideeën te structureren via een Innovation Funnel. Het is opgezet om nieuwe ideeën en nieuwe technologieën te selecteren en uit te dagen om vervolgens te bepalen welke eerst moeten worden ontwikkeld. Om dit te bereiken, worden methodes als design thinking en fast prototyping gebruikt. Ten slotte voert het Innovation Lab ook graag experimenten, doet onderzoek, analyseert de markt en ontmoet veel spelers in de sector van nieuwe technologieën. The Studio en het Innovation Lab richten zich op verschillende domeinen en technologieën zoals Internet of Things, mobiel, cognitief leren, big data en blockchain.'
+ },
+ responsibilities_title: {
+ en: 'Tâches et responsabilités',
+  fr: 'Tâches et responsabilités',
+   nl: 'Taken en verantwoordelijkheden'
+
+ },
+ responsibilities_intro: {
+ en: 'The Innovation Lab is a multidisciplinary team in which each member of the team contributes his specific skills, but at the same time the team is committed to ensuring multidisciplinarity. The Trainee Innovation Solutions Management will concentrate on the following tasks:',
+ fr: 'L’Innovation Lab est une équipe multidisciplinaire dans laquelle chaque membre de l’équipe apporte ses skills spécifiques mais ou, en même temps, l’équipe est au centre des préoccupations et fait en sorte que la multidisciplinarité est assurée. Le/la stagiaire Innovation Solutions Management se focalisera sur les tâches suivantes:',
+ nl: 'Het Innovation Lab is een multidisciplinair team waarin elk lid van het team zijn specifieke vaardigheden inbrengt, maar tegelijkertijd staat het team in om de multidisciplinariteit te waarborgen. De stagiair(e) Innovation Solutions Management zal zich concentreren op de volgende taken:'
+ },
+ responsibilities_list: {
+ en: [
+'Develop and implement the innovation funnel.',
+'Detect new opportunities for the company.',
+'Conducting experiments and testing ideas individually or in teams',
+'Maintenance and construction of external and internal contacts (Beflius, other startups, possible partners, etc.).',
+'Building prototypes in collaboration with the developer (s).',
+'Organizing and facilitating brainstorming sessions, workshops and design thinking sessions to grow and develop new ideas.',
+'Making presentations and explaining new technologies.',
+'Use your personal network and knowledge to connect ideas and people.',
+'Identifying and stimulating unusual ideas that may have a significant impact.',
+'Follow-up of the ideas, products (pengo), companies (BrightKnight) that have already been commercialized by The Studio.'
+ ],
+  fr: [
+' Mettre en place et développer l’innovation funnel. ',
+'Organiser, prioriser et définir les solutions à développer.',
+'Créer de nouvelles opportunités pour l’entreprise .',
+'Mener des expériences et tester des idées de façon individuelle ou en équipe. ',
+'Maintenir et  développer des contacts externes et internes (Beflius, autres startups, partenaires possibles,….). ',
+'Bâtir des prototypes en coopération avec le(s) développeur(s).',
+'Organiser et faciliter des brainstormings, des workshops et des sessions design thinking pour faire murir et développer des nouvelles idées.',
+'Réaliser des présentations et explications sur les nouvelles technologies. ',
+'Utiliser son réseau personnel et ses connaissances pour lier des idées et des personnes d’horizon différents.',
+'Identifier et stimuler des idées inhabituelles qui ont potentiellement un impact important.',
+'Continuer à suivre les idées, produits (pengo), sociétés (BrightKnight)  déjà commercilalisé par The Studio afin de soutenir la commercialisation. '
+ ],
+  nl: [
+'Ontwikkelen en implementeren van de innovation funnel.',
+'Aanbrengen en definiëren van oplossingen.',
+'Nieuwe opportuniteiten detecteren voor het bedrijf.',
+'Voeren van experimenten en uittesten van ideeën individueel of in team',
+'Onderhouden en uibouwen van externe en interne contacten (Beflius, andere startups, mogelijke partners, etc.).',
+'Bouwen van prototypes in samenwerking met de ontwikkelaar (s).',
+'Organiseren en faciliteren van brainstorming sessies, workshops en ontwerp-denksessies om te groeien en nieuwe ideeën te ontwikkelen.',
+'Maken van presentaties en uitleg geven over nieuwe technologieën.',
+'Gebruik maken van uw persoonlijke netwerk en kennis om ideeën en mensen te verbinden.',
+'Identificeren en stimuleren van ongewone ideeën die mogelijk een significante impact hebben.',
+'Verder opvolgen van de ideeën, producten (pengo), bedrijven (BrightKnight) die al door The Studio zijn gecommercialiseerd.'
+ ]
+ },
+ skills_title: {
+ en: '',
+ fr: '',
+ nl: '',
+ },
+ skills_intro: {
+ en: '',
+ fr: '',
+ nl: ''
+ },
+ skills_list: {
+ en: [
+ 
+ ],
+ fr: [
+ 
+ ],
+ nl: [
+
+ ]
+ },
+ profile_title: {
+ en: 'Profil',
+ fr: 'Profil',
+ nl: 'Profiel'
+ },
+ profile_list: {
+ en: [
+
+'Your internship takes place within the framework of your Masters degree in Business Administration, Commercial Sciences, etc.',
+'You are motivated and proactive.',
+'You dare to think Out-of-the-box - and are willing to go outside your comfort zone.',
+'You feel comfortable in an environment of change.',
+'Interest in new technologies and affinity with IT is a plus.',
+'Curiosity to explore interesting topics without getting lost in unimportant elements.',
+'You have good communication skills and are able to confidently and convincingly interact with the different hierarchical levels, internal and external partners, etc.',
+'You are a team player and have the ability to win and / or lose as a team',
+'Language proficiency: ENG + NL / FR'
+ ],
+ fr: [
+
+'Votre stage se déroule dans le cadre de votre Master en Science de Gestion ou Ingénierie.',
+'Motivation et proactivité.',
+'Out of the box-thinking et être préparé à se placer en dehors de sa zone de confort.',
+'Se sentir confortable dans un environnement de changement.',
+'Intéressé par  les nouvelles technologies et une affinité avec l’IT est un plus. ',
+'Curiosité pour explorer des sujets intéressants sans pour autant se perdre dans des éléments sans importance.',
+'Bonnes compétences de communication vers les différents niveaux hiérarchiques et vers des parties internes et externes.',
+'Teamplayer exemplaire et capacité à gagner et/ou perdre en équipe.',
+'Maîtrise de langues: ANG + NL/FR'
+ ],
+ nl: [
+
+ ' Je stage vindt plaats in het kader van je Master TEW, Handelswetenschappen, etc.',
+'Je bent gemotiveerd en proactief.',
+'Je durft Out-of-the-box - denken en bent bereid om buiten je comfortzone te gaan.',
+'Je voelt je comfortabel in een omgeving van verandering.',
+'Interesse in nieuwe technologieën en affiniteit met IT is een pluspunt.',
+'Nieuwsgierigheid om interessante onderwerpen te verkennen zonder te verdwalen in onbelangrijke elementen.',
+'Je beschikt over goede communicatieve vaardigheden en bent in staat om zelfzeker en overtuigend te interageren met de verschillende hiërarchische niveaus, interne en externe partners, etc.',
+'Je bent een teamplayer en hebt het vermogen om te winnen en / of te verliezen als een team',
+'Taalvaardigheid: ENG + NL / FR'
+
+
+ ]
+ },
+ offer_title: {
+ en: '',
+ fr: '',
+ nl: ''
+ },
+ offer_list: {
+ en: [
+ 
+ ],
+  fr: [
+ 
+ ],
+  nl: [
+ 
+ ]
+ },
+ apply_title: {
+ en: 'Comment postuler',
+ fr: 'Comment postuler',
+ nl: 'Hoe solliciteren'
+ },
+ apply_text: {
+ en: 'The internship takes place between September and August with a minimum internship duration of 10 weeks.Interested? Send your resume to careers@thestudio.digital ',
+ fr: 'Le stage se déroulera entre septembre et aout avec une durée minimum de 10 semaines. Intéressé ? Envoyer votre CV à l’adresse careers@thestudio.digital ',
+ nl: 'De stage heeft plaats tussen september en augustus met een minimum stage duur van 10 weken. Interesse? Stuur jouw CV naar het volgende e-mailadres careers@thestudio.digital'
+ }
+ },
+ job3: {
+ position: {
+ en: 'Internship',
+  fr: 'Stages',
+   nl: 'Stage'
+ },
+  description_title: {
+ en: 'MARKETING',
+ fr: 'MARKETING',
+ nl: 'MARKETING'
  },
  description_text: {
  en: 'Since November 2016, Belfius has established "The Studio", with the main aim to diversify the bank s income by developing solutions based on new technologies and bringing them to market as quickly as possible. These solutions can come from innovative ideas developped  in the Studio or from existing assets within Belfius. The Innovation Lab is an entity of "The Studio" and its main aim is to stimulate and facilitate innovation by structuring ideas through an Innovation Funnel. It has been set up to select and challenge new ideas and new technologies to determine which ones need to be developed first. To achieve this, methods such as design thinking and fast prototyping are used. Finally, the Innovation Lab also likes to conduct experiments, conduct research, analyzes the market and meets many players in the sector of new technologies. The Studio and the Innovation Lab focus on different domains and technologies such as Internet of Things, mobile, cognitive learning, big data and blockchain.',
