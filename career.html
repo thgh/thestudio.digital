@@ -146,7 +146,7 @@
  <li v-for="o in content.jobs.job2.offer_list[language]">{{ o }}</li>
  </ul>
  <h2>{{ content.jobs.job2.apply_title[language] }}</h2>
- <p v-bind="content.jobs.job2.apply_text[language]"></p>
+ <p v-html="content.jobs.job2.apply_text[language]"></p>
 
   <!-- JOB3 -->
 <h1>{{ content.jobs.job3.position[language] }}</h1>
@@ -171,7 +171,7 @@
  <li v-for="o in content.jobs.job3.offer_list[language]">{{ o }}</li>
  </ul>
  <h2>{{ content.jobs.job3.apply_title[language] }}</h2>
- <p v-bind="content.jobs.job3.apply_text[language]"></p>
+ <p v-html="content.jobs.job3.apply_text[language]"></p>
 
  </div>
  </div>
@@ -201,7 +201,7 @@
  <li v-for="o in content.jobs.job1.offer_list[language]">{{ o }}</li>
  </ul>
  <h2>{{ content.jobs.job1.apply_title[language] }}</h2>
- <p v-bind="content.jobs.job1.apply_text[language]"></p>
+ <p v-html="content.jobs.job1.apply_text[language]"></p>
  </div>
  </div>
  </div>
