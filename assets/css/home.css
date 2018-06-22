@@ -284,7 +284,7 @@ article.pengo {
   background-color: white;
   border-radius: 10px;
   color: #c30045;
-  font-family: arial;
+  font-family: 'Belfius Regular';
   /*margin-top: 10px;*/
 }
 .section4 h3 {
@@ -293,7 +293,7 @@ article.pengo {
   font-size: 1rem;
 }
 .section4 p {
-  font-family: arial;
+  font-family: 'Belfius Regular';
   font-size: .95rem;
   text-align: center;
 }
