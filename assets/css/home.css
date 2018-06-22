@@ -1,4 +1,3 @@
-
 /* SECTION 2 -- Presentation */
 
 .section_intro {
@@ -110,7 +109,7 @@
 .brightknight_img img, .pengo_img img{
   width: 100%;
   position: relative;
-  z-index: -1;
+  z-index: 0!important;
 }
 .project {
   width: 100vw;
@@ -200,6 +199,7 @@ article.pengo {
     max-width: 50vh;
     height: 50vh;
     width: 50vh; 
+    z-index: 5;
   }
   
   .section3 article {
@@ -216,7 +216,7 @@ article.pengo {
   }
   .section3 .brightknight {
     position: absolute;
-    z-index: -2;
+    z-index: 3;
     top: 50%;
     width: 100%;
     padding-bottom: 100px;
@@ -238,7 +238,7 @@ article.pengo {
     height: 50vw;
     max-width: 50vh;
     width: 50vw;
-    z-index: -2;
+    z-index: -1;
     position: relative;
   }
 
@@ -304,8 +304,3 @@ article.pengo {
   }
 
 }
-
-
-/*bleu: #425c6c
-gris : #f4f5f7
-rose : #c30045*/
