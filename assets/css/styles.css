@@ -59,7 +59,7 @@ canvas {
   display: flex;
   justify-content: space-between;
   padding: 0 10vw;
-  font-family: arial;
+  font-family: 'Belfius Regular';
   letter-spacing: .1rem;
   font-size: 0.8rem;
 }
