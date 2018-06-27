@@ -290,7 +290,11 @@ nav > a{
   margin-bottom: 10px;
 }
 
+.vp-controls-wrapper
 
+{
+    opacity: 0;
+}
 
 
 

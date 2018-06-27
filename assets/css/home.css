@@ -304,3 +304,9 @@ article.pengo {
   }
 
 }
+
+.vp-controls-wrapper
+
+{
+    opacity: 0;
+}
